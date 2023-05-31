@@ -4,6 +4,7 @@ description:      Be yourself and don't go with the flow.
 avatar:           /images/avatar.jpg
 url:              https://chengirii.github.io
 icon:             /images/favicon.ico
+commtent-plugin:  github # github or disqus
 
 menu:
   - name:          首页

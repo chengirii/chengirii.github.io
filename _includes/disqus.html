@@ -1,4 +1,5 @@
-{% if page.comments != false %}
+
+{% if page.comments != false and site.commtent-plugin == "disqus" %}
 <script>
     var options = {
       shortname: 'soft-breeze',
@@ -14,4 +15,39 @@
 </script>
 <div id="load_disqus_js"><a target="_self" href="javascript:void(0)" onclick="loadDisqus()">点击加载评论</a></div>
 <div id="disqusjs"></div>
+{% endif %}
+
+{% if page.comments != false and site.commtent-plugin == "github" %}
+<div id="load_disqus_js"><a target="_self" href="javascript:void(0)" onclick="loadComments()">点击加载评论</a></div>
+<div class="giscus-container"></div>
+<script>
+  function loadComments() {
+      var giscus_container = document.createElement("div");
+      giscus_container.classList.add("giscus-container");
+      // 添加到页面中
+      var parent = document.querySelector("#load_disqus_js").parentNode;
+      parent.insertBefore(giscus_container, document.querySelector(".giscus-container"));
+      // 创建一个新的 script 元素并设置属性
+      var script = document.createElement("script");
+      script.src = "https://giscus.app/client.js";
+      script.setAttribute("data-repo", "chengirii/chengirii.github.io");
+      script.setAttribute("data-repo-id", "R_kgDOJppc9A");
+      script.setAttribute("data-category", "General");
+      script.setAttribute("data-category-id", "DIC_kwDOJppc9M4CW239");
+      script.setAttribute("data-mapping", "pathname");
+      script.setAttribute("data-strict", "0");
+      script.setAttribute("data-reactions-enabled", "1");
+      script.setAttribute("data-emit-metadata", "0");
+      script.setAttribute("data-input-position", "bottom");
+      script.setAttribute("data-theme", "https://gw.alipayobjects.com/os/k/9z78d6/comment.css");
+      script.setAttribute("data-lang", "zh-CN");
+      script.setAttribute("data-loading", "lazy");
+      script.setAttribute("crossorigin", "anonymous");
+      script.async = true;
+      // 将脚本放入容器内
+      giscus_container.appendChild(script);
+      document.getElementById('load_disqus_js').classList.add('done');
+  }
+  </script>
+
 {% endif %}
