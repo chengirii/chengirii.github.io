@@ -917,7 +917,7 @@
   .post-detail .post .post-info {
     text-align: center;
   }
-  
+
   // new  
   .back-to-top {
       position: fixed;
@@ -927,4 +927,8 @@
   }
   .back-to-top.hidden{
       display: none;
+  }
+
+  #disqusjs, .giscus-container {
+    padding: 24px 0;
   }

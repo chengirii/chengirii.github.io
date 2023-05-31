@@ -22,12 +22,7 @@
 <div class="giscus-container"></div>
 <script>
   function loadComments() {
-      var giscus_container = document.createElement("div");
-      giscus_container.classList.add("giscus-container");
-      // 添加到页面中
-      var parent = document.querySelector("#load_disqus_js").parentNode;
-      parent.insertBefore(giscus_container, document.querySelector(".giscus-container"));
-      // 创建一个新的 script 元素并设置属性
+      var giscus_container = document.querySelector(".giscus-container");
       var script = document.createElement("script");
       script.src = "https://giscus.app/client.js";
       script.setAttribute("data-repo", "chengirii/chengirii.github.io");
@@ -44,7 +39,6 @@
       script.setAttribute("data-loading", "lazy");
       script.setAttribute("crossorigin", "anonymous");
       script.async = true;
-      // 将脚本放入容器内
       giscus_container.appendChild(script);
       document.getElementById('load_disqus_js').classList.add('done');
   }
