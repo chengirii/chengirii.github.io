@@ -1,0 +1,21 @@
+{% assign homeActive = 'active' %}
+{% if page.hideHomeActive %}
+{% assign homeActive = nil %}
+{% endif %}
+
+<div class="site-header">
+    <img class="avatar" src="{{site.avatar}}" alt="">
+    <h1 class="site-title" >
+        {{site.title}}
+    </h1>
+    <p class="site-description">
+        {{site.description}}
+    </p>
+    <div class="menu-container">
+        {% for menu in site.menu  %}
+        <a href="{{menu.link}}" target="{{menu.target}}" class="menu" >
+            {{menu.name}}
+        </a>
+        {% endfor %}
+    </div>
+</div>

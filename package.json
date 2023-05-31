@@ -1,0 +1,21 @@
+{
+  "name": "chengiri",
+  "author": "Kevin",
+  "homepage": "https://changchen.cc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chengirii/chengiri.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/chengirii/chengiri.github.io/issues"
+  },
+  "scripts": {
+    "dev": "bundle exec jekyll serve --watch",
+    "start": "npm run dev",
+    "build": "bundle exec jekyll build",
+    "min": "uglifyjs ./js/index.js -o ./js/index.min.js  --comments all"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.7.5"
+  }
+}

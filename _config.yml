@@ -1,0 +1,51 @@
+title:            清风徐来
+author:           Kevin
+description:      Be yourself and don't go with the flow.
+avatar:           /images/avatar.jpg
+url:              https://chengirii.github.io
+icon:             /images/favicon.ico
+
+menu:
+  - name:          首页
+    link:          /
+    target:        _self
+
+  - name:          归档
+    link:          /archives.html
+    target:        _self
+
+  - name:          关于
+    link:          /about.html
+    target:        _self
+
+  - name:          RSS
+    link:          /feed.xml
+    target:        _blank
+
+lang:      zh-cmn-Hans
+timezone: Asia/Shanghai
+locale:      zh_CN
+future:      true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+paginate: 10
+paginate_path: "page/:num/"
+
+
+permalink: /:year-:month-:day/:title.html
+
+include: [".htaccess"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "package.json","node_modules"]
+
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+plugins:
+  - jekyll-paginate
+

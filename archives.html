@@ -1,0 +1,29 @@
+---
+layout: home
+title: 归档
+description:  "Be yourself and don't go with the flow."
+comments: false
+hideHomeActive: true
+---
+<div class="archives-container">
+    {% capture current_year %}
+        {{ "" }}
+    {% endcapture %}
+    {% for post in site.posts %}
+        {% if post.hide != true %}
+            {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+            {% if year != current_year %}
+                {% assign current_year = year %}
+                <h1 class="year">{{ current_year }}</h1>
+            {% endif %}
+            <div class="post">
+                <div class="time">
+                    {{ post.date | date: "%m-%d" }}
+                </div>
+                <a href="{{ post.url }}">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+{% if page.comments != false %}
+<script>
+    var options = {
+      shortname: 'soft-breeze',
+      apikey: 'CY5DsSfVmmPqkPfcmlRvFLzvaAmQqEm9NQhP38qZ9oFDYhQ5heq1kCuPLbXBTSli', 
+      url: document.location.origin + document.location.pathname
+    };
+    
+    window.loadDisqus = function () {
+      const disqusjs = new DisqusJS(options);
+      document.getElementById('load_disqus_js').classList.add('done');
+      disqusjs.render(document.getElementById('disqusjs'));
+  };    
+</script>
+<div id="load_disqus_js"><a target="_self" href="javascript:void(0)" onclick="loadDisqus()">点击加载评论</a></div>
+<div id="disqusjs"></div>
+{% endif %}

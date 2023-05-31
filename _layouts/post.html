@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{page.lang}}">
+    {% include head.html %}
+<body>
+    <div class="main">
+        <div class="main-content">
+            {% include header.html %}
+            <div class="post-detail">
+                <article class="post">
+                    <h1 class="post-title">{{ page.title }}</h1>
+                    <div class="post-info">
+                        <time>{{ page.date | date: "%Y-%m-%d" }}</time>
+                        <span>{{site.author}}</span>
+                    </div>
+                    <div class="post-content-wrapper">
+                        <div class="post-content">
+                            {{ content }}
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            {% if page.next %}
+            <div class="next-post">
+              <div class="next">上一篇</div>
+              <a href="{{ page.previous.url }}">
+                <h3 class="post-title">{{ page.next.title }}</h3>
+              </a>
+            </div>
+            {% endif %}
+            {% include disqus.html %}
+            {% include top.html %}
+            {% include footer.html %}
+        </div>
+       
+    </div>
+   
+</body>
+
+</html>
