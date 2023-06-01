@@ -832,7 +832,7 @@
   
   .archives-container {
     padding-left: 185px;
-    
+    flex: 1;
   }
   
   @media (max-width: 600px){
@@ -846,7 +846,6 @@
     padding: 32px 0;
     font-weight: 900;
     font-size: 28px;
-    margin-bottom: 32px;
   }
   
   .archives-container .post {
@@ -931,4 +930,19 @@
 
   #disqusjs, .giscus-container {
     padding: 24px 0;
+  }
+  
+  .notfound {
+    text-align: center;
+    margin-top: 40px;
+    flex: 1;
+    }
+  .notfound h2 {
+      line-height :4
+  }
+  @media (max-width: 600px) {
+    .notfound h2 {
+      font-size: 20px;
+      line-height :3
+    }
   }
