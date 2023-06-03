@@ -15,6 +15,11 @@ menu:
     link:          /archives.html
     target:        _self
 
+  - name:          分类
+    link:          /category/
+    target:        _self
+
+
   - name:          关于
     link:          /about.html
     target:        _self

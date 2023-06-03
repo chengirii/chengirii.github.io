@@ -9,8 +9,8 @@
                 <article class="post">
                     <h1 class="post-title">{{ page.title }}</h1>
                     <div class="post-info">
+                        <span>Category:&nbsp;&nbsp;{{page.categories}}</span>
                         <time>{{ page.date | date: "%Y-%m-%d" }}</time>
-                        <span>{{site.author}}</span>
                     </div>
                     <div class="post-content-wrapper">
                         <div class="post-content">
