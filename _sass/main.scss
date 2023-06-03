@@ -843,7 +843,7 @@
   }
   
   .archives-container .year {
-    padding: 32px 0;
+    padding-bottom: 32px;
     font-weight: 900;
     font-size: 28px;
   }
@@ -946,3 +946,30 @@
       line-height :3
     }
   }
+  .page-title {
+    text-align: center;
+    padding: 32px 0;
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 32px;
+    position: relative;;
+  
+    &::after {
+        content: "";
+        position: absolute;
+        width: 48px;
+        height: 4px;
+        border-radius: 2px;
+        display: block;
+        background: black;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+  .page-container .post .post-title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+}
