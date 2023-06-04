@@ -9,7 +9,9 @@
                 <article class="post">
                     <h1 class="post-title">{{ page.title }}</h1>
                     <div class="post-info">
+                        {% if page.categories.size > 0 %}
                         <span>Category:&nbsp;&nbsp;{{page.categories}}</span>
+                        {% endif %}
                         <time>{{ page.date | date: "%Y-%m-%d" }}</time>
                     </div>
                     <div class="post-content-wrapper">

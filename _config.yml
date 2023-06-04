@@ -1,9 +1,9 @@
 title:            清风徐来
 author:           Kevin
 description:      Be yourself and don't go with the flow.
-avatar:           /images/avatar.jpg
+avatar:           /assets/img/avatar.jpg
 url:              https://chengirii.github.io
-icon:             /images/favicon.ico
+icon:             /assets/img/favicon.ico
 commtent-plugin:  github # github or disqus
 
 menu:
@@ -42,7 +42,17 @@ paginate: 10
 paginate_path: "page/:num/"
 
 
-permalink: /:year-:month-:day/:title.html
+
+defaults:
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: true # Enable comments in posts.
+      permalink: /posts/:title/
+
+
 
 include: [".htaccess"]
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "package.json","node_modules"]

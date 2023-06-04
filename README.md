@@ -8,9 +8,9 @@
 
 ## Preview
 
-<img src="/images/preview/home.png"/>
-<img src="/images/preview/archive.png"/>
-<img src="/images/preview/post.png"/>
+<img src="/assets/img/preview/home.png"/>
+<img src="/assets/img/preview/archive.png"/>
+<img src="/assets/img/preview/post.png"/>
 
 ## How To Use
 

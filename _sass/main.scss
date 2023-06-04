@@ -332,6 +332,15 @@
     color: #495057;
     font-weight: lighter;
   }
+
+  @media (max-width:600px) {
+    .site-header .site-description {
+      font-size: 16px;
+      padding: 24px 0 ;
+      color: #495057;
+      font-weight: lighter;
+    } 
+  }
   
   .site-header .menu-container a.menu {
     font-size: 16px;
@@ -339,6 +348,17 @@
     flex-shrink: 0;
     font-weight: 600;
   }
+  
+  @media (max-width: 600px) {
+    .site-header .menu-container a.menu {
+      font-size: 16px;
+      padding: 8px 15px;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+    
+  }
+
   
   .site-header .avatar {
     margin-bottom: 24px;
@@ -491,7 +511,7 @@
     color: #5E5E5E;
   }
   
-  .post-detail .post .post-info>time:before {
+  .post-detail .post .post-info>time:not(:first-child):before {
     content: "/ ";
     font-size: 10px;
     color: rgba(0, 0, 0, 0.1);
