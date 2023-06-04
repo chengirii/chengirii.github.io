@@ -42,7 +42,14 @@ paginate: 10
 paginate_path: "page/:num/"
 
 
-permalink: /posts/:title/
+defaults:
+  - scope:
+      path: "" 
+      type: posts
+    values:
+      layout: post
+      comments: true
+      permalink: /posts/:title/
 
 
 

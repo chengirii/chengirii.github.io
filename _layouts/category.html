@@ -11,7 +11,7 @@ permalink: /category/
   {% for item in (0..site.categories.size) %}
   {% unless forloop.last %}
   {% capture this_word %}{{ cats_list[item] | strip_newlines }}{% endcapture %}
-    <a href="#" class="post" >
+    <a href="/category/{{this_word}}/" class="post" >
         <h2 class="post-title">{{this_word}}</h2>
       <div class="size">
         共{{ site.categories[this_word].size }}篇文章
