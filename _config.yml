@@ -42,6 +42,11 @@ paginate: 10
 paginate_path: "page/:num/"
 
 
+collections:
+  tabs:
+    output: true
+
+
 defaults:
   - scope:
       path: "" 
@@ -50,6 +55,13 @@ defaults:
       layout: post
       comments: true
       permalink: /posts/:title/
+  
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
 
 
 
