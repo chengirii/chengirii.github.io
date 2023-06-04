@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>{% if page.layout =='post' or page.hideHomeActive or page.is404 %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <title>{%- unless page.layout == 'home' -%}{{ page.title | append: ' | ' }}{%- endunless -%}{{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
     {% if page.tags and page.layout == "post" %}

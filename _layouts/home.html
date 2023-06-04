@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{site.lang}}">
-    {% include head.html %}
-<body>
-    <div class="main">
-        <div class="main-content">
-            {% include header.html %}
-            {{ content }}
-            {% include top.html %}
-            {% include footer.html %}
-        </div>
-    </div>
-   
+---
+layout: default
+refactor: true
+---
 
-</body>
-</html>
+<div class="post-container">
+    {% for post in paginator.posts %}
+    {% if post.hide != true %}
+    <article class="post">
+        <a href="{{post.url}}">
+            <h2 class="post-title">{{post.title}}</h2>
+        </a>
+        <div class="post-info">
+            <span>
+                {{ post.date | date: "%Y-%m-%d" }}
+            </span>
+        </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+   {% include pagination.html %}
+</div>

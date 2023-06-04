@@ -12,7 +12,7 @@ menu:
     target:        _self
 
   - name:          归档
-    link:          /archives.html
+    link:          /archives/
     target:        _self
 
   - name:          分类
@@ -21,7 +21,7 @@ menu:
 
 
   - name:          关于
-    link:          /about.html
+    link:          /about/
     target:        _self
 
   - name:          RSS
@@ -45,11 +45,11 @@ paginate_path: "page/:num/"
 
 defaults:
   - scope:
-      path: "" # An empty string here means all files in the project
+      path: "" 
       type: posts
     values:
       layout: post
-      comments: true # Enable comments in posts.
+      comments: true
       permalink: /posts/:title/
 
 

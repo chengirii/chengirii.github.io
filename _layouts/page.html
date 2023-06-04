@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{page.lang}}">
-    {% include head.html %}
-<body>
-    <div class="main">
-        <div class="main-content">
-            {% include header.html %}
-            <div class="post-detail">
-                <article class="post">
-                    <h1 class="page-title">{{ page.title }}</h1>
-                    <div class="post-content-wrapper">
-                        <div class="post-content">
-                            {{ content }}
-                        </div>
-                    </div>
-                </article>
+---
+layout: default
+---
+<div class="post-detail">
+    <article class="post">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="post-content-wrapper">
+            <div class="post-content">
+                {{ content }}
             </div>
-            {% include top.html %}
-            {% include footer.html %}
         </div>
-       
-    </div>
-   
-</body>
-
-</html>
+    </article>
+</div>
