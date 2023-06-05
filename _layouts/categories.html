@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign cat_name = page.title %} 
+{% assign posts = site.categories[cat_name] | where_exp: "post", "post.hide != true" %}
+<h1 class="page-title">分类: {{ page.title }}</h1>
+<div class="category-container">
+{% for post in posts %}
+  <a href="{{ site.url }}{{ post.url }}" class="post" >
+    <h2 class="post-title">{{post.title}}</h2>
+    <div class="size">
+      {{ post.date | date: "%Y-%m-%d" }}
+    </div>
+  </a>
+{% endfor %}
+</div>
