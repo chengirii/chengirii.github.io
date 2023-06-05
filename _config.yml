@@ -41,6 +41,10 @@ sass:
 paginate: 10
 paginate_path: "page/:num/"
 
+google_analytics:  
+
+google_verify:
+baidu_verify:
 
 collections:
   tabs:
@@ -72,7 +76,16 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-archives
 
 plugins:
   - jekyll-paginate
+  - jekyll-archives
 
+
+jekyll-archives:
+  enabled: [categories]
+  layouts:
+    category: category
+  permalinks:
+    category: /category/:name/
