@@ -3,7 +3,7 @@
 - This is Kiko's front-end technology blog.
 - Commonly used to record learning and life front-end technology.
 - Concerned about new technology and new thinking.
-- The blog theme named [breeze-jekyll-theme] is created by [Kevin](https://changchen.cc/).
+- The blog theme named [breeze-jekyll-theme] is created by [Kiko](https://changchen.cc/).
 
 
 ## Preview
