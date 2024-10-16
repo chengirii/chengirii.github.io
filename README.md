@@ -1,6 +1,6 @@
 # [changchen.cc](https://changchen.cc)
 
-- This is Kevin's front-end technology blog.
+- This is Kiko's front-end technology blog.
 - Commonly used to record learning and life front-end technology.
 - Concerned about new technology and new thinking.
 - The blog theme named [breeze-jekyll-theme] is created by [Kevin](https://changchen.cc/).
